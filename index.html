@@ -39,7 +39,13 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-
+// this function creates a rectangle on the canvas that is blue and has an upper left coordinate of (50,50) and has a 200 and 150 length on the two different sides
+function rectangle_a() {
+	var a_canvas = document.getElementById("a");
+	var a_context = a_canvas.getContext("2d");
+	a_context.fillStyle = "blue";
+	a_context.fillRect(50,50,200,150);
+}
 </script>
 
 
