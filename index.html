@@ -61,10 +61,10 @@ function a_displayImage() {
 	var a_canvas = document.getElementById('a');
 	var a_context = a_canvas.getContext('2d');
 	const img = new Image(); 
-	img.src = 'https://geekyhooker.files.wordpress.com/2013/09/img_8543-copy.jpg';
 	img.onload = function() {
 		a_context.drawImage(img,50,50,100,100);
 	};
+	img.src = 'https://geekyhooker.files.wordpress.com/2013/09/img_8543-copy.jpg';
 	
 }
 	
