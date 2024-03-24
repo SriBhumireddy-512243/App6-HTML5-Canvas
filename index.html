@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> 
 <html> 
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
@@ -40,12 +41,26 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 // this function creates a rectangle on the canvas that is blue and has an upper left coordinate of (50,50) and has a 200 and 150 length on the two different sides
-function rectangle_a() {
+function a_rectangle() {
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
 	a_context.fillStyle = "blue";
 	a_context.fillRect(50,50,200,150);
 }
+
+//this functions prints my name on the canvas, other methods allow for the text to be blue, centered, and anchored to the middle at (130,80)
+function a_name() {
+	var a_canvas = document.getElementById("a");
+	var a_context = a_canvas.getContext("2d");
+	a_context.fillStyle = "blue";
+	a_context.textAlign = "center";
+	a_context.textBaseline = 'middle"
+	a.fillText("Sri Harshitha Bhumireddy", 130,80);	
+}
+
+	
+//
+function 
 </script>
 
 
@@ -77,10 +92,12 @@ function rectangle_a() {
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
+	
 	<!-- this line creates a canvas of the provided dimnesions and  adds a border as well-->
 	<canvas id="a" width ="300" height ="225" style = "border:1px solid #000000;"></canvas>
 
-
+	<!--  -->
+	
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
