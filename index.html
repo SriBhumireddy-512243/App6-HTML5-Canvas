@@ -44,6 +44,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function a_rectangle() {
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
+	a_context.fillStyle = "blue";
 	a_context.fillRect(50,50,200,150);
 }
 
@@ -51,6 +52,7 @@ function a_rectangle() {
 function a_name() {
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
+	a_context.fillStyle = "blue";
 	a_context.textAlign = "center";
 	a_context.textBaseline = 'middle"
 	a.fillText("Sri Harshitha Bhumireddy", 130,80);	
@@ -92,7 +94,7 @@ function
 	<p>Content goes here.</p>
 	
 	<!-- this line creates a canvas of the provided dimnesions and  adds a border as well-->
-	<canvas id="a" width ="300" height ="225" style = "border:1px solid #000000;"></canvas>
+	<canvas id="a" width ="300" height ="300" style = "border:1px solid #000000;"></canvas>
 
 	<!--creates a button that calls on the a_rectangle() function-->
 	<input type="button" onclick="a_rectangle()" value= "Draw a Rectangle">
