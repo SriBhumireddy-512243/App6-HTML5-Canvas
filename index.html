@@ -56,6 +56,14 @@ function a_name() {
 	a_context.fillText('Sri Harshitha Bhumireddy', 130,80);	
 }
 
+//this function displays an image of bevo at a certain coordinate and of a certain size 
+function a_displayImage() {
+	const img = new Image(); 
+	img.onload = function() {
+		a_context.drawImage(img,50,50,100,100);
+	};
+	img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeekyhooker.wordpress.com%2F2013%2F09%2F13%2Fhook-em%2F&psig=AOvVaw14Ni7Hz_pZPjzpsZN-LjTB&ust=1711395685957000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCODmqvTTjYUDFQAAAAAdAAAAABAD';
+}
 	
 </script>
 
@@ -96,7 +104,10 @@ function a_name() {
 
 	<!--creates a button that calls on the a_name() function-->
 	<input type="button" onclick="a_name()" value= "Print Name">
-		
+	
+	<!--creates a button that calls on the a_displayImage() function-->
+	<input type="button" onclick="a_displayImage()" value="Display Image">
+</div>		
 	
 	
 	
