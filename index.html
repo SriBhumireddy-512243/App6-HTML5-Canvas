@@ -96,11 +96,16 @@ function a_clear() {
     left: 0vw;
     z-index: 1;
 }
-	
+<!-- the two sections below center the canvas and the buttons on the screen -->
 .btn-container {
         display: flex;
         justify-content: center;
     }
+
+.canvas-container {
+	display: flex;
+   	justify-content: center;
+}	
 </style>
 
 <body>
@@ -109,10 +114,12 @@ function a_clear() {
 </div>
 	
 <div id="content" class="w3-container">
-	
+
+	<div class="canvas-container">
 	<!-- this line creates a canvas of the provided dimnesions (300 x 300)and  adds a border as well-->
 	<canvas id="a" width ="300" height ="300" style = "border:1px solid #000000;"></canvas>
-
+	</div>
+	
 	<div class = "btn-container">
 		<!--creates a button that calls on the a_rectangle() function-->
 		<input type="button" onclick="a_rectangle()" value= "Draw a Rectangle">
