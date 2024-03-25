@@ -96,6 +96,11 @@ function a_clear() {
     left: 0vw;
     z-index: 1;
 }
+	
+.btn-container {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 
 <body>
@@ -108,17 +113,19 @@ function a_clear() {
 	<!-- this line creates a canvas of the provided dimnesions (300 x 300)and  adds a border as well-->
 	<canvas id="a" width ="300" height ="300" style = "border:1px solid #000000;"></canvas>
 
-	<!--creates a button that calls on the a_rectangle() function-->
-	<input type="button" onclick="a_rectangle()" value= "Draw a Rectangle">
-
-	<!--creates a button that calls on the a_name() function-->
-	<input type="button" onclick="a_name()" value= "Print Name">
+	<div class = "btn-container>
+		<!--creates a button that calls on the a_rectangle() function-->
+		<input type="button" onclick="a_rectangle()" value= "Draw a Rectangle">
 	
-	<!--creates a button that calls on the a_displayImage() function-->
-	<input type="button" onclick="a_displayImage()" value="Display Image">
-
-	<!-- creates a button that calls on the a_clear() function--> 
-	<input type="button" onclick = "a_clear()" value = "Clear Canvas">
+		<!--creates a button that calls on the a_name() function-->
+		<input type="button" onclick="a_name()" value= "Print Name">
+		
+		<!--creates a button that calls on the a_displayImage() function-->
+		<input type="button" onclick="a_displayImage()" value="Display Image">
+	
+		<!-- creates a button that calls on the a_clear() function--> 
+		<input type="button" onclick = "a_clear()" value = "Clear Canvas">
+	</div>
 </div>		
 	
 	
