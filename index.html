@@ -21,7 +21,7 @@ Brief Description of Goal of Code:
 Use HTML attributes and functions to create multiple visual elements
  
 Known Issues:
-blah, blah, blah, blah
+All functions do not place the element centered on the canvas and there is overlap.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -40,7 +40,7 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-// this function creates a rectangle on the canvas that has an upper left coordinate of (50,50) and has a 200 and 150 length on the two different sides
+// this function creates a rectangle on the canvas that has an upper left coordinate of (50,50) and has a 200 and 150 length on the two different sides using .fillRect and .fillStyle
 function a_rectangle() {
 	var a_canvas = document.getElementById('a');
 	var a_context = a_canvas.getContext('2d');
@@ -48,7 +48,7 @@ function a_rectangle() {
 	a_context.fillRect(50,50,200,150);
 }
 
-//this function prints my name on the canvas, other methods allow for the text to be centered, and anchored to the middle at (130,80)
+//this function prints my name on the canvas, other methods allow for the text to be centered, and anchored to the middle at (130,80) using the .fillText method
 function a_name() {
 	var a_canvas = document.getElementById('a');
 	var a_context = a_canvas.getContext('2d');
@@ -56,7 +56,7 @@ function a_name() {
 	a_context.fillText('Sri Harshitha Bhumireddy', 130,80);	
 }
 
-//this function displays an image of bevo at a certain coordinate and of a certain size 
+//this function displays an image of Bevo at a certain coordinate and of a certain size using the .onload and .src methods
 function a_displayImage() {
 	var a_canvas = document.getElementById('a');
 	var a_context = a_canvas.getContext('2d');
@@ -103,6 +103,7 @@ function a_clear() {
     }	
 </style>
 
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
@@ -110,11 +111,13 @@ function a_clear() {
 	
 <div id="content" class="w3-container">
 
+	//without a container there were issues with the canvas placement so added a canvas container
 	<div class="canvas-container">
-	<!-- this line creates a canvas of the provided dimnesions (300 x 300)and  adds a border as well-->
-	<canvas id="a" width ="300" height ="300" style = "border:1px solid #000000;"></canvas>
+		<!-- this line creates a canvas of the provided dimnesions (300 x 300)and  adds a border as well-->
+		<canvas id="a" width ="300" height ="300" style = "border:1px solid #000000;"></canvas>
 	</div>
-	
+
+	//created a button container in order to keep buttons together and center them at the top style section
 	<div class = "btn-container">
 		<!--creates a button that calls on the a_rectangle() function-->
 		<input type="button" onclick="a_rectangle()" value= "Draw a Rectangle">
