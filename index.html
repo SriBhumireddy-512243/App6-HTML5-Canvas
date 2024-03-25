@@ -67,7 +67,13 @@ function a_displayImage() {
 	img.src = 'https://geekyhooker.files.wordpress.com/2013/09/img_8543-copy.jpg';
 	
 }
-	
+
+//this functions clear the canvas using the .clearRect method
+function a_clear() {
+	var a_canvas = document.getElementById('a');
+	var a_context = a_canvas.getContext('2d');
+	a_context.clearRect(0, 0, 300, 300); 
+}
 </script>
 
 
@@ -99,7 +105,7 @@ function a_displayImage() {
 	
 <div id="content" class="w3-container">
 	
-	<!-- this line creates a canvas of the provided dimnesions and  adds a border as well-->
+	<!-- this line creates a canvas of the provided dimnesions (300 x 300)and  adds a border as well-->
 	<canvas id="a" width ="300" height ="300" style = "border:1px solid #000000;"></canvas>
 
 	<!--creates a button that calls on the a_rectangle() function-->
@@ -110,6 +116,9 @@ function a_displayImage() {
 	
 	<!--creates a button that calls on the a_displayImage() function-->
 	<input type="button" onclick="a_displayImage()" value="Display Image">
+
+	<!-- creates a button that calls on the a_clear() function--> 
+	<input type="button" onclick = "a_clear()" value = "Clear Canvas">
 </div>		
 	
 	
